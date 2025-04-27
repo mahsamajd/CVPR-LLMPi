@@ -40,4 +40,10 @@ This work presents a detailed evaluation of how quantization impacts the trade-o
 ---
 
 ## 📁 Repository Structure
-CVPR-LLMPi/ ├── Code/ # Source code for evaluation and benchmarking │ ├── Nubia_Score/ # Scripts for generating LLM responses and calculating NUBIA scores │ │ ├── llm_response.py │ │ ├── llm_response_bitnet.py │ │ └── nubia.py │ ├── Throughput/ # Scripts for throughput (TPS) and latency measurement │ │ ├── Throughput.py │ │ └── Throughput_BitNet.py ├── Figures/ # Performance graphs and analysis │ ├── Accuracy_over_Latency/ # Figures analyzing accuracy vs latency trade-offs │ ├── LLM_Response_Comparison/ # Figures comparing LLM outputs │ ├── TPJ/ # Tokens Per Joule results │ ├── TPS/ # Tokens Per Second results │ ├── WPBL/ # Words Per Battery Life results ├── LLM_Responses/ # Raw model-generated outputs for NUBIA evaluation ├── README.md # Project overview and documentation
+CVPR-LLMPi/
+├── Code/ # Source code for evaluation and benchmarking
+│ ├── Nubia_Score/ # Scripts for generating LLM responses and calculating NUBIA scores
+│ ├── Throughput/ # Scripts for throughput and latency measurement
+├── Figures/ # Performance graphs and analysis
+├── LLM_Responses/ # Raw model-generated outputs for evaluation
+├── README.md # Project overview and documentation
