@@ -16,6 +16,7 @@ The project focuses on enabling real-time inference while optimizing energy effi
 ---
 
 ## 📈 Accuracy vs. Latency Trade-off
+![Accuracy vs Latency Plot](Figures/Accuracy_over_Latency/nubia.png)
 This work presents a detailed evaluation of how quantization impacts the trade-off between accuracy and latency in LLM inference on edge devices.
 - Models such as **Phi3B** and **BitNet** exhibit strong resilience to quantization, maintaining high NUBIA scores even at lower bit-widths (Q4, Q6).
 - **BitNet models** using quantization-aware training (Q1.58) achieve real-time inference speeds with minimal loss in semantic quality.
