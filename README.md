@@ -6,12 +6,20 @@ The project focuses on enabling real-time inference while optimizing energy effi
 ---
 
 ## 📚 Project Overview
+- Trade-off analysis between model accuracy, latency, and energy efficiency with quantization for edge AI applications
 - Post-training quantization (PTQ) of Large Language Models (LLMs) including Phi-3, Gemma, and Llama-3 across multiple bit-widths (Q2, Q4, Q6, Q8)
 - Quantization-Aware Training (QAT) applied to BitNet models (ternary quantization, Q1.58)
 - Benchmarking model performance using Tokens per Second (TPS), Tokens per Joule (TPJ), and Words per Battery Life (W/BL)
 - Evaluation of quantization impact on semantic coherence using NUBIA scores
 - Real-world deployment and energy measurements on Raspberry Pi 5.
-- Trade-off analysis between model accuracy, latency, and energy efficiency for edge AI applications
+
+---
+
+## 📈 Accuracy vs. Latency Trade-off
+This work presents a detailed evaluation of how quantization impacts the trade-off between accuracy and latency in LLM inference on edge devices.
+- Models such as **Phi3B** and **BitNet** exhibit strong resilience to quantization, maintaining high NUBIA scores even at lower bit-widths (Q4, Q6).
+- **BitNet models** using quantization-aware training (Q1.58) achieve real-time inference speeds with minimal loss in semantic quality.
+- Models like **Llama1B**, **Gemma2B**, and **Phi3B** show that PTQ can serve as a viable and efficient alternative to QAT, offering competitive accuracy-latency trade-offs.
 
 ---
 
@@ -26,6 +34,11 @@ The project focuses on enabling real-time inference while optimizing energy effi
 
 ## ⚙️ Requirements
 - Python 3.10+
-- ONNX Runtime
 - Llama.cpp
 - Raspberry Pi 5 (or compatible ARM64 device)
+
+---
+
+## 📁 Repository Structure
+CVPR-LLMPi/ ├── Code/ # Source code for evaluation and benchmarking │ ├── Nubia_Score/ # Scripts for generating LLM responses and calculating NUBIA scores │ │ ├── llm_response.py # Generate LLM outputs before NUBIA evaluation │ │ ├── llm_response_bitnet.py # Generate BitNet model outputs before NUBIA evaluation │ │ └── nubia.py # Calculate NUBIA semantic coherence scores │ ├── Throughput/ # Scripts for throughput (TPS) and latency measurement │ │ ├── Throughput.py │ │ └── Throughput_BitNet.py ├── Figures/ # Performance graphs and analysis │ ├── Accuracy_over_Latency/ # Figures analyzing accuracy vs latency trade-offs │ ├── LLM_Response_Comparison/ # Figures comparing LLM outputs │ ├── TPJ/ # Tokens Per Joule results │ ├── TPS/ # Tokens Per Second results │ ├── WPBL/ # Words Per Battery Life results ├── LLM_Responses/ # Raw model-generated outputs for NUBIA evaluation ├── README.md # Project overview and documentation
+
