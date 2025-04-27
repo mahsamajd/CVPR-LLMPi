@@ -40,10 +40,36 @@ This work presents a detailed evaluation of how quantization impacts the trade-o
 ---
 
 ## 📁 Repository Structure
-CVPR-LLMPi/
-├── Code/ # Source code for evaluation and benchmarking
-│ ├── Nubia_Score/ # Scripts for generating LLM responses and calculating NUBIA scores
-│ ├── Throughput/ # Scripts for throughput and latency measurement
-├── Figures/ # Performance graphs and analysis
-├── LLM_Responses/ # Raw model-generated outputs for evaluation
-├── README.md # Project overview and documentation
+```text
+.
+├── Code
+│   ├── Nubia_Score
+│   │   ├── llm_response_bitnet.py
+│   │   ├── llm_response.py
+│   │   └── nubia.py
+│   └── Throughput
+│       ├── Throughput_BitNet.py
+│       └── Throughput.py
+├── Figures
+│   ├── Accuracy_over_Latency
+│   │   └── nubia.png
+│   ├── LLM_Response_Comparison
+│   │   └── LLM_Response_Comparison.pdf
+│   ├── Nubia_Score
+│   ├── TPJ
+│   │   └── TPJ.pdf
+│   ├── TPS
+│   │   └── Final_TPS.pdf
+│   └── WPBL
+│       └── WPBL.pdf
+├── LLM_Responses
+│   ├── llm_response_without_whisper_Bitnet_results_CVPR_contextbased
+│   │   ├── bitnet_b1_58_large
+│   │   │   └── bitnet_b1_58_large.txt
+│   │   └── llama3_8B
+│   │       └── llama3_8B.txt
+│   └── llm_response_without_whisper_results_CVPR_contextbased
+│      
+└── README.md
+
+
